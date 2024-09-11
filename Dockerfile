@@ -12,6 +12,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 COPY --from=build /app/target/demoTest-1.0-SNAPSHOT.war demotest.war
+
 EXPOSE 8080
 
 ENTRYPOINT ["java","-jar","demotest.war"]
